@@ -1,0 +1,22 @@
+name: Generate UUID v4
+description: This GitHub Action generates and outputs UUID v4
+
+author: CDQ AG
+branding:
+  icon: 'underline'
+  color: 'white'
+
+outputs:
+  uuid:
+    description: "Generated UUID4"
+    value: ${{ steps.main.outputs.uuid }}
+
+runs:
+  using: composite
+  steps:
+    - id: main
+      shell: bash
+      run: |
+        UUID4=$(uuidgen)
+        echo "Generated UUID: ${UUID4}"
+        echo "uuid=${UUID4}" >> $GITHUB_OUTPUT
