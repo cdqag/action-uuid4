@@ -1,0 +1,15 @@
+name: Generate UUID v4
+description: This GitHub Action generates and outputs UUID v4
+
+author: CDQ AG
+branding:
+  icon: 'underline'
+  color: 'white'
+
+outputs:
+  uuid:
+    description: "Generated UUID4"
+
+runs:
+  using: node24
+  main: dist/main.js
