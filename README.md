@@ -1,6 +1,6 @@
 # action-uuid4
 
-This is very simple GitHub Action that generates UUID v4 using `uuidgen`.
+This is very simple GitHub Action that generates UUID v4.
 
 ## Outputs
 
